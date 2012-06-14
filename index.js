@@ -14,7 +14,6 @@ module.exports = function (files, opts) {
         var ext = path.extname(file);
         if (opts.ext && ext !== ext) return;
         if (ext === '.js') return; // already a js file, NICE TRY
-        emitter.emit('started', file);
         
         var rs = fs.createReadStream(file);
         rs.on('error', emitter.emit.bind(emitter, 'error'));
@@ -28,7 +27,7 @@ module.exports = function (files, opts) {
         });
         rs.on('end', function () {
             ws.end('"');
-            emitter.emit('finished', file);
+            emitter.emit('export', file);
             if (--pending === 0) emitter.emit('end');
         });
     });
