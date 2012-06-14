@@ -26,7 +26,7 @@ module.exports = function (files, opts) {
             ws.write(s);
         });
         rs.on('end', function () {
-            ws.end('"');
+            ws.end('"\n');
             emitter.emit('export', file);
             if (--pending === 0) emitter.emit('end');
         });

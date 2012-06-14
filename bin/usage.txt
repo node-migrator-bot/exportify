@@ -1,0 +1,7 @@
+Usage: exportify OPTIONS [files]
+  
+  OPTIONS:
+    -h, --help     show this message
+    -e, --ext      only exportify files with this extension
+    -v, --verbose  log a message for every file written
+
