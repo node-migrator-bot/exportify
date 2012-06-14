@@ -3,6 +3,8 @@ exportify
 
 Generate require()-able javascript files from non-javascript files.
 
+[![build status](https://secure.travis-ci.org/substack/exportify.png)](http://travis-ci.org/substack/exportify)
+
 example
 =======
 
