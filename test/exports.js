@@ -2,7 +2,7 @@ var test = require('tap').test;
 var exportify = require('../');
 var fs = require('fs');
 var path = require('path');
-var existsSync = fs.existsSync || path.existsSync;
+var existsSync = fs.existsSync || fs.existsSync;
 
 (function () {
     // clean out the directory
